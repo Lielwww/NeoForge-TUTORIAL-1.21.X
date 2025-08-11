@@ -1,5 +1,7 @@
 package net.liel.tutorialmod;
 
+import net.liel.tutorialmod.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -18,6 +20,7 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
+
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(TutorialMod.MOD_ID)
 public class TutorialMod {
@@ -35,7 +38,8 @@ public class TutorialMod {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
-        // Register the item to a creative tab
+        ModItems.register(modEventBus);
+        // Register the net.liel.tutorialmod.item to a creative tab
         modEventBus.addListener(this::addCreative);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
@@ -46,8 +50,12 @@ public class TutorialMod {
 
     }
 
-    // Add the example block item to the building blocks tab
+    // Add the example block net.liel.tutorialmod.item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+           event.accept(ModItems.BABYOIL);
+           event.accept(ModItems.TOY);
+        }
 
     }
 
