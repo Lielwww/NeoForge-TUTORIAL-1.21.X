@@ -24,7 +24,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of().strength(4f).noCollission().sound(SoundType.HONEY_BLOCK)));
 
     public static final DeferredBlock<Block> DIDDY_BLOCK = registerBlock("diddy_block",
-            () -> new DropExperienceBlock(UniformInt.of(40,50), BlockBehaviour.Properties.of().strength(2f).sound(SoundType.SCULK)));
+            () -> new DropExperienceBlock(UniformInt.of(40,50), BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops().sound(SoundType.SCULK)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

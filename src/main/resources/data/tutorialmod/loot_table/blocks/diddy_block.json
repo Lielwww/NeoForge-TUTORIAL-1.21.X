@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 3,
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "tutorialmod:babyoil",
+          "weight": 10,
+          "quality": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "tutorialmod:toy",
+          "weight": 1,
+          "quality": 1
+        }
+      ]
+    }
+  ],
+  "functions": [],
+  "random_sequence": "tutorialmod:blocks/diddy_block"
+}
