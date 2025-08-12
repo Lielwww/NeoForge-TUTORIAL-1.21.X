@@ -1,4 +1,10 @@
 {
   "item.tutorialmod.babyoil": "Baby oil",
-  "item.tutorialmod.toy": "Toy"
+  "item.tutorialmod.toy": "Toy",
+
+  "block.tutorialmod.babyoil_block": "Block of baby oil",
+  "block.tutorialmod.diddy_block": "THE DIDDY BLOCK",
+
+  "creativetab.tutorialmod.diddy_items": "Diddy Mod Items",
+  "creativetab.tutorialmod.diddy_blocks": "Diddy Mod Blocks"
 }

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {"item":  "tutorialmod:babyoil_block"}
+  ],
+
+  "result": {
+    "Count": 9,
+    "id": "tutorialmod:babyoil"
+  }
+}
